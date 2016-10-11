@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/jsetting32/JSUtility'
+  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/JSUtility'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'John Setting' => 'jsetting32@yahoo.com' }
-  s.source           = { :git => 'https://github.com/jsetting32/JSUtility.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/JSUtility.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'

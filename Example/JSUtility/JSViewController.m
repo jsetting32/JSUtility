@@ -7,6 +7,7 @@
 //
 
 #import "JSViewController.h"
+#import <JSUtility/UITextField+Utilities.h>
 
 @interface JSViewController ()
 
