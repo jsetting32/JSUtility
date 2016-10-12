@@ -1,5 +1,5 @@
 //
-//  UITextField+Utilities.m
+//  UITextField+CardVerification.m
 //  iMobileRep
 //
 //  Created by John Setting on 8/30/16.
@@ -8,11 +8,11 @@
 
 #import <objc/runtime.h>
 
-#import "UITextField+Utilities.h"
+#import "UITextField+CardVerification.h"
 
-@implementation UITextField(Utilities)
+@implementation UITextField(CardVerification)
 
-- (void)setupTextFieldAsCardNumberField {
+- (void)textFieldCardNumber {
     self.delegate = self;
     [self addTarget:self action:@selector(reformatAsCardNumber) forControlEvents:UIControlEventEditingChanged];
 }

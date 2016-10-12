@@ -1,5 +1,5 @@
 //
-//  UITextField+Utilities.h
+//  UITextField+CardVerification.h
 //  iMobileRep
 //
 //  Created by John Setting on 8/30/16.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface UITextField(Utilities) <UITextFieldDelegate>
-- (void)setupTextFieldAsCardNumberField;
+@interface UITextField(CardVerification) <UITextFieldDelegate>
+- (void)textFieldCardNumber;
 @end
 
