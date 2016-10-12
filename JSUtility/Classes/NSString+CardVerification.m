@@ -32,7 +32,7 @@
     int oddSum = 0;
     int evenSum = 0;
     
-    NSInteger space = [removedWhitespaces length] - 1;
+    int space = [removedWhitespaces length] - 1;
     
     for (int i = space; i >= 0; i--) {
         
