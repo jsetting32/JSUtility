@@ -31,10 +31,11 @@ The reason for the development of this project is to assist development of iOS a
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'JSUtility/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'JSUtility' => ['JSUtility/Assets/*.png']
-  # }
+
+  s.resources = "JSUtility/**/*.{png,jpeg,jpg,storyboard,xib}"
+  #s.resource_bundles = {
+  #  'JSUtility' => ['JSUtility/Assets/*.png']
+  #}
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

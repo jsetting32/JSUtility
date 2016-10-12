@@ -17,6 +17,4 @@
     #import "UITextField+CardVerification.h"
     #import "NSString+CardVerification.h"
 
-#endif
-
 #endif /* _JSUTILITY_ */
