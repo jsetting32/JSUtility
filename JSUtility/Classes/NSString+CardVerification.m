@@ -31,10 +31,8 @@
     BOOL isOdd = YES;
     int oddSum = 0;
     int evenSum = 0;
-    
-    int space = [removedWhitespaces length] - 1;
-    
-    for (int i = space; i >= 0; i--) {
+        
+    for (NSUInteger i = [removedWhitespaces length] - 1; i >= 0; i--) {
         
         int digit = [(NSString *)[stringAsChars objectAtIndex:i] intValue];
         
