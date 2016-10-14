@@ -6,8 +6,10 @@
 //  Copyright © 2016 John Setting. All rights reserved.
 //
 
-#import "NSObject+Utility.h"
+#import "NSObject+Properties.h"
+
 #import <objc/runtime.h>
+
 @implementation NSObject (Properties)
 
 - (NSDictionary *)propertiesOfObject {
