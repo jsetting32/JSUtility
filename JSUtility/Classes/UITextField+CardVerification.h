@@ -1,6 +1,6 @@
 //
 //  UITextField+CardVerification.h
-//  iMobileRep
+//  JSUtility
 //
 //  Created by John Setting on 8/30/16.
 //  Copyright © 2016 John Setting. All rights reserved.

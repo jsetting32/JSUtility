@@ -1,9 +1,9 @@
 //
 //  NSString+CardVerification.m
-//  Pods
+//  JSUtility
 //
-//  Created by John Setting on 10/12/16.
-//
+//  Created by John Setting on 8/30/16.
+//  Copyright © 2016 John Setting. All rights reserved.
 //
 
 #import "NSString+CardVerification.h"
