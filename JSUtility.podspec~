@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'JSUtility'
-    s.version          = '0.1.13'
+    s.version          = '0.1.14'
     s.summary          = 'A large amount of utility classes to assist in iOS Development'
 
     # This description is used to generate tags and improve search results.

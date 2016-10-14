@@ -50,5 +50,7 @@ typedef NS_ENUM(NSInteger, kJSTextFieldCardNumberErrorType) {
 
 // Use this when you have previous information of a card that has been saved.
 // Set the text field and it will display only circle characters followed by the last 4 digits of the card number
-- (void)setCardNumberText:(NSString *)text showCardImage:(BOOL)showCardImage showErrorShadow:(BOOL)showShadow;
+- (void)setCardNumberText:(NSString *)text;
+
+- (void)setShowCardImage:(BOOL)show;
 @end
