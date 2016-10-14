@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 
+#import "JSTextFieldCardNumber.h"
 #import "JSUtility.h"
 #import "NSString+CardVerification.h"
 #import "UITextField+CardVerification.h"

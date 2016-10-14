@@ -10,7 +10,7 @@
 #import <JSUtility/JSUtility.h>
 
 @interface JSViewController ()
-
+@property (weak, nonatomic) IBOutlet JSTextFieldCardNumber *textField;
 @end
 
 @implementation JSViewController
@@ -19,6 +19,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+
+    [self.textField setCardNumberText:@"4111111111111111"];
+//    [self.textField setShowCardImage:NO];
+//    [self.textField setErrorType:kJSTextFieldCardNumberErrorTypeNever];
 }
 
 - (void)didReceiveMemoryWarning

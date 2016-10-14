@@ -9,7 +9,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - JSUtility (0.1.0)
+  - JSUtility (0.1.5)
   - Specta (1.0.5)
 
 DEPENDENCIES:
@@ -27,7 +27,7 @@ SPEC CHECKSUMS:
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   Expecta+Snapshots: c343f410c7a6392f3e22e78f94c44b6c0749a516
   FBSnapshotTestCase: '094f9f314decbabe373b87cc339bea235a63e07a'
-  JSUtility: df21c67254006ce090f45186f9e8cc6be89ab76b
+  JSUtility: b4e4b46f51e01c004f3e931c8f8059e9666a9ee7
   Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
 
 PODFILE CHECKSUM: 8f17179338ad50ad224ee54600a284674645349c
