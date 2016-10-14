@@ -247,6 +247,14 @@
     return digitsOnlyString;
 }
 
+- (NSString *)lastXCharacters:(int)x {
+    return [self substringFromIndex:MAX((int)[self length] - x, 0)]; //in case string is less than 4 characters long.
+}
+
+- (NSString *)protectedCardString {
+    return [self lastXCharacters:4];
+}
+
 /*
  Inserts spaces into the string to format it as a credit card number,
  incrementing `cursorPosition` as appropriate so that, for instance, if we

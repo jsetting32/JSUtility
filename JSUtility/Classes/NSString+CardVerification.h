@@ -40,6 +40,8 @@ typedef NS_ENUM(NSUInteger, JSCardType) {
 + (UIImage *)cardImage:(JSCardType)type;
 + (NSPredicate *)predicateForType:(JSCardType)type;
 - (BOOL)isValidCardLengthWithType:(JSCardType)type;
+- (NSString *)lastXCharacters:(int)x;
+- (NSString *)protectedCardString;
 - (NSString *)removeNonDigitsAndPreserveCursorPosition:(NSUInteger *)cursorPosition;
 - (NSString *)insertSpacesForCardType:(JSCardType)card preserveCursorPosition:(NSUInteger *)cursorPosition;
 - (NSString *)insertSpacesEveryXDigits:(NSInteger)digits preserveCursorPosition:(NSUInteger *)cursorPosition;

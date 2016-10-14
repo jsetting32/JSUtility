@@ -58,17 +58,6 @@
     [self updateShadow];
 }
 
-- (void)layoutIfNeeded {
-    [super layoutIfNeeded];
-
-    if (self.showCardImage) {
-        self.imageViewCard = [[UIImageView alloc] initWithImage:[NSString cardImage:kJSCardTypeInvalid]];
-        [self.imageViewCard setContentMode:UIViewContentModeScaleAspectFit];
-        [self setLeftViewMode:UITextFieldViewModeAlways];
-        [self setLeftView:self.imageViewCard];
-    }
-}
-
 - (void)commonInit {
     [self setShowCardImage:YES];
     [self setShadowColor:[UIColor redColor]];
@@ -76,6 +65,11 @@
     [self setFont:[UIFont fontWithName:[self.font fontName] size:10]];
     [self setPlaceholder:@"●●●● ●●●● ●●●● ●●●●"];
     [self layoutIfNeeded];
+
+    self.imageViewCard = [[UIImageView alloc] initWithImage:[NSString cardImage:kJSCardTypeInvalid]];
+    [self.imageViewCard setContentMode:UIViewContentModeScaleAspectFit];
+    [self setLeftViewMode:UITextFieldViewModeAlways];
+    [self setLeftView:self.imageViewCard];
 }
 
 - (void)setShowShadow:(BOOL)showShadow {
@@ -94,9 +88,14 @@
     }
 }
 
+- (void)setShowCardImage:(BOOL)showCardImage {
+    if (!showCardImage) {
+        [self setLeftView:nil];
+    }
+}
 
-- (void)setCardNumberText:(NSString *)text {
-    NSString *trimmedString = [text substringFromIndex:MAX((int)[text length] - 4, 0)]; //in case string is less than 4 characters long.
+- (void)setCardNumberText:(NSString *)text showCardImage:(BOOL)showCardImage showErrorShadow:(BOOL)showShadow {
+    NSString *trimmedString = [text protectedCardString];
     NSMutableString *cardNumber = [NSMutableString string];
     for (int i = 0; i < 12; i++) {
         [cardNumber appendString:kJSTextFieldCircleCharacter];
@@ -106,6 +105,13 @@
     NSUInteger length = [text length];
     NSString *cardNumberWithSpaces = [cardNumber insertSpacesForCardType:[text cardType] preserveCursorPosition:&length];
     [self setText:cardNumberWithSpaces];
+    
+    if (!showCardImage) {
+        [self setLeftView:nil];
+    }
+    
+    if (!showShadow) {
+    }
 }
 
 // Version 1.2
@@ -207,7 +213,7 @@
 
 - (CGRect)clearButtonRectForBounds:(CGRect)bounds {
     CGRect textRect = [super clearButtonRectForBounds:bounds];
-    textRect.origin.x += 10;
+    textRect.origin.x -= 5;
     return textRect;
 }
 

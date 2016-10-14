@@ -1,4 +1,4 @@
-#use_frameworks!
+use_frameworks!
 
 target 'JSUtility_Example' do
   pod 'JSUtility', :path => '../'
@@ -8,7 +8,7 @@ target 'JSUtility_Example' do
 
     pod 'Specta'
   pod 'Expecta'
-  #pod 'FBSnapshotTestCase'
+  pod 'FBSnapshotTestCase'
   pod 'Expecta+Snapshots'
   end
 end

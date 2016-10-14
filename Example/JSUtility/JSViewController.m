@@ -21,8 +21,8 @@
 	// Do any additional setup after loading the view, typically from a nib.
 
     [self.textField setCardNumberText:@"4111111111111111"];
-//    [self.textField setShowCardImage:NO];
-//    [self.textField setErrorType:kJSTextFieldCardNumberErrorTypeNever];
+    [self.textField setShowCardImage:NO];
+    [self.textField setErrorType:kJSTextFieldCardNumberErrorTypeNever];
 }
 
 - (void)didReceiveMemoryWarning

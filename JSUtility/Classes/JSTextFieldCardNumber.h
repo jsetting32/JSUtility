@@ -38,7 +38,6 @@ typedef NS_ENUM(NSInteger, kJSTextFieldCardNumberErrorType) {
 @property (strong, nonatomic) UIColor *shadowColor;
 @property (assign, nonatomic) CGFloat shadowRadius;
 @property (assign, nonatomic) kJSTextFieldCardNumberErrorType errorType;
-@property (assign, nonatomic) BOOL showCardImage;
 
 // If you set this, it will mainly be for the reason, the card isnt valid when submitted for verification
 // Two suggestions with this,
@@ -51,5 +50,5 @@ typedef NS_ENUM(NSInteger, kJSTextFieldCardNumberErrorType) {
 
 // Use this when you have previous information of a card that has been saved.
 // Set the text field and it will display only circle characters followed by the last 4 digits of the card number
-- (void)setCardNumberText:(NSString *)text;
+- (void)setCardNumberText:(NSString *)text showCardImage:(BOOL)showCardImage showErrorShadow:(BOOL)showShadow;
 @end
