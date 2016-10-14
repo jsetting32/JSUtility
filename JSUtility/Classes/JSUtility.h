@@ -14,6 +14,7 @@
     #define _JSUTILITY_
 
     // Card Verification
+    #import "JSTextFieldCardNumber.h"
     #import "UITextField+CardVerification.h"
     #import "NSString+CardVerification.h"
 

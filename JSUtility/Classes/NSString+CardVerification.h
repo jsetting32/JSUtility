@@ -13,10 +13,11 @@ typedef NS_ENUM(NSUInteger, JSCardType) {
     kJSCardTypeBankcard,                /* Invalid */
     kJSCardTypeChinaUnionPay,
     kJSCardTypeDankort,
-    kJSCardTypeDinersClubCarteBlanche,
-    kJSCardTypeDinersClubEnRoute,       /* Invalid */
-    kJSCardTypeDinersInternational,
-    kJSCardTypeDinersUnitedStatesCanada,
+    kJSCardTypeDiners,
+//    kJSCardTypeDinersClubCarteBlanche,
+//    kJSCardTypeDinersClubEnRoute,       /* Invalid */
+//    kJSCardTypeDinersInternational,
+//    kJSCardTypeDinersUnitedStatesCanada,
     kJSCardTypeDiscover,
     kJSCardTypeInstaPayment,
     kJSCardTypeInterPayment,
@@ -35,8 +36,11 @@ typedef NS_ENUM(NSUInteger, JSCardType) {
 - (BOOL)luhnCheck;
 - (BOOL)isCardValidWithType:(JSCardType)type;
 - (BOOL)CVVCheckWithType:(JSCardType)type;
-+ (JSCardType)cardType:(NSString *)cardNumber;
+- (JSCardType)cardType;
 + (UIImage *)cardImage:(JSCardType)type;
 + (NSPredicate *)predicateForType:(JSCardType)type;
 - (BOOL)isValidCardLengthWithType:(JSCardType)type;
+- (NSString *)removeNonDigitsAndPreserveCursorPosition:(NSUInteger *)cursorPosition;
+- (NSString *)insertSpacesForCardType:(JSCardType)card preserveCursorPosition:(NSUInteger *)cursorPosition;
+- (NSString *)insertSpacesEveryXDigits:(NSInteger)digits preserveCursorPosition:(NSUInteger *)cursorPosition;
 @end
