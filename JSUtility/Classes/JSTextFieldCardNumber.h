@@ -34,7 +34,7 @@ typedef NS_ENUM(NSInteger, kJSTextFieldCardNumberErrorType) {
     kJSTextFieldCardNumberErrorTypeCardNumberLengthHarsh
 };
 
-@interface JSTextFieldCardNumber : UITextField
+@interface JSTextFieldCardNumber : UITextField <UITextFieldDelegate>
 @property (strong, nonatomic) UIColor *shadowColor;
 @property (assign, nonatomic) CGFloat shadowRadius;
 @property (assign, nonatomic) kJSTextFieldCardNumberErrorType errorType;

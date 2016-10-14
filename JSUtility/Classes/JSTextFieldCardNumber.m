@@ -42,6 +42,7 @@
 // Unless overriden, we want this text field to be the delegate,
 // to handle all the logic of credit card verification
 - (void)textFieldCardNumber {
+  
     [self setDelegate:self];
     
     [self setClearButtonMode:UITextFieldViewModeWhileEditing];
