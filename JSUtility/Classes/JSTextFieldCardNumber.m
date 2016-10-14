@@ -85,6 +85,15 @@
     }
 }
 
+- (void)showErrorShadow:(BOOL)show {
+    if (show) {
+        [self.layer addSublayer:self.shadowLayer];
+    } else {
+        [self.shadowLayer removeFromSuperlayer];
+    }
+}
+
+
 - (void)setCardNumberText:(NSString *)text {
     NSString *trimmedString = [text substringFromIndex:MAX((int)[text length] - 4, 0)]; //in case string is less than 4 characters long.
     NSMutableString *cardNumber = [NSMutableString string];
