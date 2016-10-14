@@ -252,7 +252,11 @@
 }
 
 - (NSString *)protectedCardString {
-    return [self lastXCharacters:4];
+    NSMutableString *cc = [NSMutableString stringWithString:[self lastXCharacters:4]];
+    for (int i = 0; i < 12; i++) {
+        [cc insertString:kJSTextFieldCircleCharacter atIndex:0];
+    }
+    return cc;
 }
 
 /*

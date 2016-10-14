@@ -64,12 +64,17 @@
     [self setShadowRadius:5.0f];
     [self setFont:[UIFont fontWithName:[self.font fontName] size:10]];
     [self setPlaceholder:@"●●●● ●●●● ●●●● ●●●●"];
-    [self layoutIfNeeded];
 
     self.imageViewCard = [[UIImageView alloc] initWithImage:[NSString cardImage:kJSCardTypeInvalid]];
     [self.imageViewCard setContentMode:UIViewContentModeScaleAspectFit];
     [self setLeftViewMode:UITextFieldViewModeAlways];
     [self setLeftView:self.imageViewCard];
+}
+
+- (void)setShowCardImage:(BOOL)show {
+    if (!show) {
+        [self setLeftView:nil];
+    }
 }
 
 - (void)setShowShadow:(BOOL)showShadow {
@@ -88,14 +93,8 @@
     }
 }
 
-- (void)setShowCardImage:(BOOL)showCardImage {
-    if (!showCardImage) {
-        [self setLeftView:nil];
-    }
-}
-
-- (void)setCardNumberText:(NSString *)text showCardImage:(BOOL)showCardImage showErrorShadow:(BOOL)showShadow {
-    NSString *trimmedString = [text protectedCardString];
+- (void)setCardNumberText:(NSString *)text {
+    NSString *trimmedString = [text lastXCharacters:4];
     NSMutableString *cardNumber = [NSMutableString string];
     for (int i = 0; i < 12; i++) {
         [cardNumber appendString:kJSTextFieldCircleCharacter];
@@ -105,13 +104,6 @@
     NSUInteger length = [text length];
     NSString *cardNumberWithSpaces = [cardNumber insertSpacesForCardType:[text cardType] preserveCursorPosition:&length];
     [self setText:cardNumberWithSpaces];
-    
-    if (!showCardImage) {
-        [self setLeftView:nil];
-    }
-    
-    if (!showShadow) {
-    }
 }
 
 // Version 1.2
@@ -212,9 +204,7 @@
 }
 
 - (CGRect)clearButtonRectForBounds:(CGRect)bounds {
-    CGRect textRect = [super clearButtonRectForBounds:bounds];
-    textRect.origin.x -= 5;
-    return textRect;
+    return [super clearButtonRectForBounds:bounds];
 }
 
 - (void)updateShadow {
