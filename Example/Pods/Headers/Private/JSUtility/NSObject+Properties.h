@@ -1,0 +1,1 @@
+../../../../../JSUtility/Classes/NSObject+Properties.h

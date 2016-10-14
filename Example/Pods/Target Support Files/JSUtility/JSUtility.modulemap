@@ -1,6 +1,0 @@
-framework module JSUtility {
-  umbrella header "JSUtility-umbrella.h"
-
-  export *
-  module * { export * }
-}
