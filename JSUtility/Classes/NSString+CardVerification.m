@@ -7,6 +7,7 @@
 //
 
 #import "NSString+CardVerification.h"
+#import "JSTextFieldCardNumber.h"
 
 @implementation NSString(CardVerification)
 
