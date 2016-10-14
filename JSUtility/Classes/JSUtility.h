@@ -10,8 +10,8 @@
 #import <Availability.h>
 
 
-#ifndef _JSUTILITY_
-    #define _JSUTILITY_
+//#ifndef _JSUTILITY_
+//    #define _JSUTILITY_
 
     // Card Verification
     #import "JSTextFieldCardNumber.h"
@@ -24,4 +24,4 @@
     #import "NSMutableArray+Additions.h"
     #import "NSMutableDictionary+Additions.h"
 
-#endif /* _JSUTILITY_ */
+//#endif /* _JSUTILITY_ */
