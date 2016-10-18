@@ -7,7 +7,6 @@
 //
 
 #import "NSString+CardVerification.h"
-#import "JSTextFieldCardNumber.h"
 
 @implementation NSString(CardVerification)
 
@@ -94,27 +93,27 @@
 }
 
 + (UIImage *)cardImage:(JSCardType)type {
-    if (type == kJSCardTypeAmericanExpress) return [UIImage imageNamed:@"amex.png"];
-    if (type == kJSCardTypeBankcard) return [UIImage imageNamed:@"credit.png"];
-    if (type == kJSCardTypeChinaUnionPay) return [UIImage imageNamed:@"credit.png"];
-    if (type == kJSCardTypeDankort) return [UIImage imageNamed:@"dankort.png"];
-    if (type == kJSCardTypeDiners) return [UIImage imageNamed:@"diners.png"];
+    if (type == kJSCardTypeAmericanExpress) return [UIImage imageNamed:@"card_amex.png"];
+    if (type == kJSCardTypeBankcard)        return [UIImage imageNamed:@"card_credit.png"];
+    if (type == kJSCardTypeChinaUnionPay)   return [UIImage imageNamed:@"card_credit.png"];
+    if (type == kJSCardTypeDankort)         return [UIImage imageNamed:@"card_dankort.png"];
+    if (type == kJSCardTypeDiners)          return [UIImage imageNamed:@"card_diners.png"];
 //    if (type == kJSCardTypeDinersClubCarteBlanche) return [UIImage imageNamed:@"diners"];
 //    if (type == kJSCardTypeDinersClubEnRoute) return [UIImage imageNamed:@"diners"];
 //    if (type == kJSCardTypeDinersInternational) return [UIImage imageNamed:@"diners"];
 //    if (type == kJSCardTypeDinersUnitedStatesCanada) return [UIImage imageNamed:@"diners"];
-    if (type == kJSCardTypeDiscover) return [UIImage imageNamed:@"discover.png"];
-    if (type == kJSCardTypeInstaPayment) return [UIImage imageNamed:@"credit.png"];
-    if (type == kJSCardTypeInterPayment) return [UIImage imageNamed:@"credit.png"];
-    if (type == kJSCardTypeJCB) return [UIImage imageNamed:@"jcb.png"];
-    if (type == kJSCardTypeLaser) return [UIImage imageNamed:@"laster.png"];
-    if (type == kJSCardTypeMaestro) return [UIImage imageNamed:@"maestro.png"];
-    if (type == kJSCardTypeMasterCard) return [UIImage imageNamed:@"mastercard.png"];
-    if (type == kJSCardTypeSolo) return [UIImage imageNamed:@"solo.png"];
-    if (type == kJSCardTypeSwitch) return [UIImage imageNamed:@"credit.png"];
-    if (type == kJSCardTypeUATP) return [UIImage imageNamed:@"credit.png"];
-    if (type == kJSCardTypeVisa) return [UIImage imageNamed:@"visa.png"];
-    return [UIImage imageNamed:@"credit.png"];
+    if (type == kJSCardTypeDiscover)        return [UIImage imageNamed:@"card_discover.png"];
+    if (type == kJSCardTypeInstaPayment)    return [UIImage imageNamed:@"card_credit.png"];
+    if (type == kJSCardTypeInterPayment)    return [UIImage imageNamed:@"card_credit.png"];
+    if (type == kJSCardTypeJCB)             return [UIImage imageNamed:@"card_jcb.png"];
+    if (type == kJSCardTypeLaser)           return [UIImage imageNamed:@"card_laster.png"];
+    if (type == kJSCardTypeMaestro)         return [UIImage imageNamed:@"card_maestro.png"];
+    if (type == kJSCardTypeMasterCard)      return [UIImage imageNamed:@"card_mastercard.png"];
+    if (type == kJSCardTypeSolo)            return [UIImage imageNamed:@"card_solo.png"];
+    if (type == kJSCardTypeSwitch)          return [UIImage imageNamed:@"card_credit.png"];
+    if (type == kJSCardTypeUATP)            return [UIImage imageNamed:@"card_credit.png"];
+    if (type == kJSCardTypeVisa)            return [UIImage imageNamed:@"card_visa.png"];
+                                            return [UIImage imageNamed:@"card_credit.png"];
 }
 
 + (NSPredicate *)predicateForType:(JSCardType)type {
