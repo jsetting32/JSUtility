@@ -13,6 +13,9 @@
 //#ifndef _JSUTILITY_
 //    #define _JSUTILITY_
 
+    // Joystick
+    #import "JSJoystickView.h"
+
     // Card Verification
     #import "JSTextFieldCardNumber.h"
     #import "UITextField+CardVerification.h"

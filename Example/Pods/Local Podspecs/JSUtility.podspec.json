@@ -25,13 +25,13 @@
   "subspecs": [
     {
       "name": "Categories",
-      "source_files": "JSUtility/*+*.{h,m}",
-      "public_header_files": "JSUtility/*+*.h"
+      "public_header_files": "JSUtility/*+*.h",
+      "source_files": "JSUtility/*+*.{h,m}"
     },
     {
       "name": "Classes",
-      "source_files": "JSUtility/JS*.{h,m}",
       "public_header_files": "JSUtility/JS*.h",
+      "source_files": "JSUtility/JS*.{h,m}",
       "dependencies": {
         "JSUtility/Categories": [
 
